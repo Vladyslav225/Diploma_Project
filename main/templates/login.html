@@ -5,15 +5,13 @@
 {% endblock %}
 
 {% block container %}
-    <h1>Можно зарегистрироватся</h1>
-    <form method="post4
-    ">
-        {% csrf_token %}
 
-        {{ form.name }}<br>
-        {{ form.email }}<br>
-        
-        <button type="submit" class="btn btn-success">Отправить</button>
-        <span>{{ error }}</span>
+    <h1>Разрешаем войти аккаунт, но только в свой!</h1>
+
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Вход"></p>
     </form>
+
 {% endblock %}

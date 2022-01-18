@@ -1,6 +1,4 @@
-
-  
-from .models import Task, Login
+from .models import Task
 from django.forms import ModelForm, TextInput, Textarea
 
 
@@ -23,27 +21,5 @@ class TaskForm(ModelForm):
                 attrs = {
                 'class': 'form-control',
                 'placeholder': 'Отзыв'
-                })
-            }
-
-class LoginForm(ModelForm):
-    class Meta:
-        model = Login
-        
-        fields = [
-            'name',
-            'email'
-            ]
-
-        widgets = {
-            'name': TextInput(
-                attrs = {
-                'class': 'form-control',
-                'placeholder': 'Введите имя'
-                }),
-            'email': TextInput(
-                attrs = {
-                'class': 'form-control',
-                'placeholder': 'Введите email'
                 })
             }

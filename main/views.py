@@ -3,7 +3,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 
-from .forms import TaskForm, LoginForm
+from .forms import TaskForm
 from .models import Task, Catalogue
 
 
@@ -49,22 +49,6 @@ def opinions(request):
     return render(request, 'opinions.html', context)
 
 
-def login(request):
-    error = ''
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
 
-        if form.is_valid():
-            form.save()
-            return redirect('home')
 
-        else:
-            error = 'Неверная регистрация'
 
-    form = LoginForm()
-    context = {
-        'form': form,
-        'error': error
-    }
-
-    return render(request, 'login.html', context)

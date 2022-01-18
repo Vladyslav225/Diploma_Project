@@ -12,8 +12,8 @@ class Task(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = 'Задача'
-        verbose_name_plural = 'Задачи'
+        verbose_name = 'Отзывы'
+        verbose_name_plural = 'Отзывы'
 
 
 #Catalogue
@@ -30,19 +30,9 @@ class Catalogue(models.Model):
         verbose_name_plural = 'Продукты'
 
 
-#Login
-class Login(models.Model):
 
-    name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=50)
 
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = ''
-
-#Products
+# Products
 # class Products(models.Model):
 #     TEST = 'test'
 #     DEV = 'dev'
