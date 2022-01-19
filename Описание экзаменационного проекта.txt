@@ -1,0 +1,65 @@
+manage.py - запуск сервера
+
+settings - основные настройки приложений:
+	settings.py:
+		import os:
+			Создание пути внутри проекта следующим образом;
+			
+		import environ
+			Сохрание SECRET_KEY в отдельный файл (.env), для безопасности;
+			Все подключения к PostgreSQL сохранеы в отдельный файл (.env),для безопасности
+			
+		Подключение к localhot (ALLOWED_HOSTS);
+		Опредиление приложений проекта (
+			INSTALLED_APPS:
+				Подключение приложение:
+					account;
+					main;
+			MIDDLEWARE;
+			ROOT_URLCONF;
+			TEMPLATES;
+			WSGI_APPLICATION
+			);
+		Подключение к базе данных (DATABASES);
+		Проверка всех паролей подключения (AUTH_PASSWORD_VALIDATORS);
+		Подключения статических файлов(
+			CSS, 
+			JavaScript, 
+			Images
+			)
+			
+		TODO connect smtp;
+		TODO connect Redis;
+		TODO connect Celery.
+		
+	asgi - для настроек проекта.
+		Он предоставляет вызываемый ASGI как переменную уровня модуля с именем "application".
+		
+	urls - подключения настроек приложений (main, account и их подключение к admin-серверу).
+	
+	wsgi - для настроек проекта проекта настроек.
+		Он предоставляет вызываемый WSGI как переменную уровня модуля с именем "application".
+		
+account - создание настроек приложения авторизации:
+	migrations - миграции проекта;
+	admin.py - регистрация models;
+	apps.py - подключения конфогураций приложения;
+	forms.py - создание форм;
+	models.py - создание моделей;
+	urls.py - подключение ссылок;
+	tests.py - тестирование приложений проекта;
+	views.py - подключение к Front-End'у.
+	
+main - создание общих настроек Back_End:
+	migrations - миграции проекта;
+	templates - HTML-верстка;
+	admin.py - регистрация models;
+	apps.py - подключения конфогураций приложения;
+	forms.py - создание форм;
+	models.py - создание моделей;
+	urls.py - подключение ссылок;
+	tests.py - тестирование приложений проекта;
+	views.py - подключение к Front-End'у.
+		
+		
+		
