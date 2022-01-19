@@ -141,7 +141,9 @@ BOOTSTRAP3 = {
 
 #TODO smtp
 
-#TODO Redis related settings
+#TODO Redis connection settings
+
+#TODO Celery connection settings
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
